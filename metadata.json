@@ -1,0 +1,14 @@
+{
+  "name": "tamarintech-hub_keys",
+  "version": "0.1.0",
+  "author": "tamarintech",
+  "summary": "Simple puppet module to fetch keys from a gitlab or github server.",
+  "license": "Apache-2.0",
+  "source": "https://github.com/tamarintech/hub_keys",
+  "project_page": "https://github.com/tamarintech/hub_keys",
+  "issues_url": "https://github.com/tamarintech/hub_keys/issues",
+  "dependencies": [
+    {"name":"puppetlabs-stdlib","version_requirement":">= 1.0.0"}
+  ]
+}
+
