@@ -30,7 +30,7 @@ Users will most likely already have keys configured in gitlab or github.  That's
 
 Use in a module and pass to create_resources:
 
-```$keys = hub_keys('monkey', 'https://gitlab.server.for.monkey')
+``` $keys = hub_keys('monkey', 'https://gitlab.server.for.monkey')
 
 create_resources(ssh_authorized_key, $keys)
 ```
