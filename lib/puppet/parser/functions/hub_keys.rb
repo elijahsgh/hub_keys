@@ -30,7 +30,8 @@ EOS
         'type' => key_fields[0],
         'key' => key_fields[1],
         'user' => user,
-        'name' => "#{user}-gitlab-key-#{key_i}"
+        'name' => "#{user}-gitlab-key-#{key_i}",
+        'onlyif' => "test -d ~#{user}"
       }
       key_i += 1
     end
