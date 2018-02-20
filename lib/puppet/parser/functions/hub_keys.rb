@@ -24,14 +24,15 @@ EOS
     key_hash = {}
 
     response.body.lines.each do |key|
+      next if not File.directory?(File.expand_path("~#{user}"))
+
       key_fields = key.strip.split
       key_hash["#{user} gitlab key #{key_i}"] = {
         'ensure' => 'present',
         'type' => key_fields[0],
         'key' => key_fields[1],
         'user' => user,
-        'name' => "#{user}-gitlab-key-#{key_i}",
-        'onlyif' => "test -d ~#{user}"
+        'name' => "#{user}-gitlab-key-#{key_i}"
       }
       key_i += 1
     end
